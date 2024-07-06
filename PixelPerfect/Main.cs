@@ -19,7 +19,7 @@ namespace PixelPerfect
     public partial class PixelPerfect : IDalamudPlugin
     {
         public string Name => "Pixel Perfect";
-        private readonly DalamudPluginInterface _pi;
+        private readonly IDalamudPluginInterface _pi;
         private readonly ICommandManager _cm;
         private readonly IClientState _cs;
         private readonly IFramework _fw;
@@ -43,7 +43,7 @@ namespace PixelPerfect
         private const int Version = 5;
         
         public PixelPerfect(
-            DalamudPluginInterface pluginInterface,
+            IDalamudPluginInterface pluginInterface,
             ICommandManager commandManager,
             IClientState clientState,
             IFramework framework,
@@ -154,7 +154,7 @@ namespace PixelPerfect
             _pi.SavePluginConfig(_configuration);
         }
 
-        private void DrawRingWorld(GameObject actor, float radius, int numSegments, float thicc, uint colour, bool offset, bool rotateOffset, Vector4 off)
+        private void DrawRingWorld(IGameObject actor, float radius, int numSegments, float thicc, uint colour, bool offset, bool rotateOffset, Vector4 off)
         {
             var xOff = 0f;
             var yOff = 0f;

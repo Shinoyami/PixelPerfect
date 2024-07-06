@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Authors>Haplo064</Authors>
         <Version>3.0.4.0</Version>
         <Description>Perfecting Pixels</Description>
